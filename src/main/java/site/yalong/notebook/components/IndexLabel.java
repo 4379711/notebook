@@ -1,5 +1,6 @@
 package site.yalong.notebook.components;
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import site.yalong.notebook.constance.GlobalConst;
 
@@ -9,12 +10,15 @@ import site.yalong.notebook.constance.GlobalConst;
  */
 public class IndexLabel extends Label {
     public IndexLabel() {
-        super();
+        this.setMinSize(GlobalConst.BUTTON_WIDTH, GlobalConst.BUTTON_HEIGHT);
+        this.setMaxSize(GlobalConst.BUTTON_WIDTH, GlobalConst.BUTTON_HEIGHT);
+        this.setPrefSize(GlobalConst.BUTTON_WIDTH, GlobalConst.BUTTON_HEIGHT);
         this.setBorder(null);
         this.setFocused(false);
         this.setFocusTraversable(false);
+        this.setAlignment(Pos.CENTER);
         this.setFont(GlobalConst.TEXT_FONT);
-        this.setStyle("-fx-text-fill:pink;");
+        this.setStyle(GlobalConst.INDEX_STYLE);
     }
 
     public void setIndex(String value) {
